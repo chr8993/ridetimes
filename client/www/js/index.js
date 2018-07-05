@@ -5,7 +5,7 @@ angular.module("ridetimes")
   $scope.rides = [];
   $scope.loadRides = function() {
     var d = $q.defer();
-    var url = "http://192.168.86.91";
+    var url = "http://swunder.com";
     url += ":3030/ridetimes";
     $http({
       url: url,
