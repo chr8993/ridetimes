@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi, viewport-fit=cover" />
+        <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/vendor/fontawesome.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Six Flags Ride Times</title>
+    </head>
+    <body ng-controller="ridesCtrl">
+      <nav ng-init="loadRides();" class="navbar fixed-top navbar-dark bg-primary">
+      <!-- Navbar content -->
+        <a class="navbar-brand" href="#">Ride Times</a>
+      </nav>
+      <pull-refresh main="#rides"></pull-refresh>
+      <div class="list-container" id="rides">
+        <div ng-repeat="ride in rides | orderBy: 'name': false" class="row">
+          <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row ride-list">
+                    <div class="col-5 ride">
+                      <img class="ride card-img-top" ng-src="https://cdn.swunder.com/ridetimes/{{ride.id}}.jpg?w=600&h=700&fit=crop" alt="Card image cap">
+                    </div>
+                    <div class="col-7 ride-details">
+                      <h5 class="card-title">{{ride.name}}</h5>
+                      <div class="card-text time">
+                        <i class="fas fa-clock"></i>
+                        <span class="wait">{{ride.waitTime}} mins</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated {{ride.lastUpdated}}</small>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+      <script type="text/javascript" src="js/vendor/angular.min.js"></script>
+      <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/vendor/pulltorefresh.min.js"></script>
+      <script type="text/javascript" src="js/vendor/angular-filter.min.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+      <script>
+        document.addEventListener("deviceready", function() {
+          angular.bootstrap(document, ["ridetimes"]);
+        }, false);
+      </script>
+    </body>
+</html>

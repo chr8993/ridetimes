@@ -1,0 +1,16 @@
+{
+  "name": "ridetimes",
+  "version": "0.0.1",
+  "description": "Ride times app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "themeparks": "^4.7.1"
+  }
+}

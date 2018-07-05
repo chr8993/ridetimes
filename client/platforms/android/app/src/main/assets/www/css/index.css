@@ -1,0 +1,113 @@
+.list-container {
+  margin-top: 70px;
+}
+.list-container .row {
+  margin-bottom: 20px;
+}
+.list-container .ride-list {
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+nav {
+  box-shadow: 0px 0px 4px rgba(0,0,0,.6);
+}
+body {
+  background: #fff;
+}
+
+.row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.ride {
+  padding: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.card-body {
+  padding: 0px;
+}
+
+.ride-details {
+  padding: 0.8rem;
+}
+
+.time {
+    margin-top: 20px;
+}
+
+.time i {
+  color: #7f7f7f;
+  font-size: 2.5em;
+  margin-right: 5px;
+  margin-top: 0px;
+}
+
+.wait {
+  font-size: 1.05em;
+  display: inline-block;
+  color: #2f2f2f;
+  margin-top: 0px;
+  vertical-align: top;
+  line-height: 2.3em;
+}
+
+.lds-ellipsis {
+display: inline-block;
+position: relative;
+width: 80px;
+height: 80px;
+transform: scale(.8);
+opacity: .8;
+}
+.lds-ellipsis div {
+position: absolute;
+top: 33px;
+width: 13px;
+height: 13px;
+border-radius: 50%;
+background: #007bff;
+animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+left: 8px;
+animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+left: 8px;
+animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+left: 32px;
+animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+left: 56px;
+animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+0% {
+  transform: scale(0);
+}
+100% {
+  transform: scale(1);
+}
+}
+@keyframes lds-ellipsis3 {
+0% {
+  transform: scale(1);
+}
+100% {
+  transform: scale(0);
+}
+}
+@keyframes lds-ellipsis2 {
+0% {
+  transform: translate(0, 0);
+}
+100% {
+  transform: translate(24px, 0);
+}
+}
